@@ -40,10 +40,3 @@ In the spirit of technical transparency, this project includes a critical self-e
 📬 Contact
 LinkedIn: [[Your Profile Link](https://www.linkedin.com/in/vandana-sharma-20a5ab24a/)]
 
-
-***
-
-### 💡 Why this works for HR:
-1.  **The "Engineering Reflection" Section:** This is the most important part. It shows you aren't just "copying a tutorial." It shows you understand **why** a model fails or succeeds.
-2.  **Visual Structure:** Using badges and emojis makes the project look modern and well-maintained.
-3.  **Skill Keywords:** It prominently features "Keras," "RNN," "Stationarity," and "Data In
