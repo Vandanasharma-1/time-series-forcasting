@@ -1,66 +1,49 @@
-📈 Time-Series Forecasting: Financial Market Prediction
-Project Overview
-This project implements a sophisticated Deep Learning pipeline to forecast financial indicators using Recurrent Neural Networks (RNNs). Using 5 years of historical Yahoo Stock Price data, the model explores the complexities of sequential data, addressing challenges like stationarity, non-linearity, and predictive horizons.
+# 📈 Financial Time-Series Forecasting with RNNs
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/Framework-Keras%20%2F%20TensorFlow-orange.svg)](https://tensorflow.org)
+[![Pandas](https://img.shields.io/badge/Library-Pandas%20%2F%20NumPy-red.svg)](https://pandas.pydata.org)
 
-🎯 Key Objectives
-Statistical Validation: Evaluate data stationarity to ensure model reliability.
+## 📌 Project Overview
+This project focuses on building and evaluating **Deep Learning** architectures to predict financial indicators using historical Yahoo Stock Price data (2015–2020). The primary goal was to move beyond simple regression and implement **Recurrent Neural Networks (RNNs)** capable of handling sequential dependencies in market data.
 
-Architecture Benchmarking: Compare multiple RNN and LSTM configurations.
+## 🛠️ Tech Stack & Tools
+* **Language:** Python
+* **Deep Learning:** Keras, TensorFlow (RNN & LSTM layers)
+* **Data Analysis:** Pandas, NumPy
+* **Visualization:** Matplotlib (FiveThirtyEight style)
+* **Optimization:** Adam Optimizer, MSE Loss Functions
 
-Future Forecasting: Develop a multi-step prediction window for financial trends.
+## 🚀 Key Milestones
+1.  **Data Exploration & Validation:** Analyzed 1,825 unique daily records. Conducted data integrity checks (null handling, date unique-indexing).
+2.  **Stationarity Evaluation:** Assessed the statistical properties of the time series to determine the stability of the mean and variance.
+3.  **Model Selection:** Developed and benchmarked various RNN-based architectures.
+4.  **Future Forecasting:** Visualized the "Predicted vs. Actual" values to determine the effective predictive horizon of the model.
+
+## 📊 Performance Insights
+* **Accuracy Horizon:** The model demonstrates high reliability for short-term forecasts (up to 2 time-steps).
+* **Error Analysis:** Successfully identified "linear behavior" bias in the initial RNN results, where the model maintained a constant slope.
+* **Scalability:** The architecture was designed to be modular, allowing the same logic to be extrapolated across all four market indicators (High, Low, Open, Close).
+
+## 💡 Engineering Reflection (The "Honest" Breakdown)
+In the spirit of technical transparency, this project includes a critical self-evaluation section:
+* **The Challenge:** Identified that standard RNNs can struggle with non-linearity without proper regularization.
+* **The Solution:** Proposed a hybrid approach combining **Lasso/Ridge Regression** with Time-Series Forecasting to improve feature correlation and prevent overfitting.
+* **Conclusion:** While the current model serves as a strong learning framework, it highlights the necessity of **Dropout layers** and **Regularization** for real-world economic deployments.
+
+## 📂 Project Structure
+```text
+├── data/
+│   └── yahoo_stock.csv        # 5 years of historical financial data
+├── notebooks/
+│   └── time-series-forecasting.ipynb  # Main analysis and model pipeline
+└── README.md                  # Project documentation
+📬 Contact
+LinkedIn: [[Your Profile Link](https://www.linkedin.com/in/vandana-sharma-20a5ab24a/)]
 
 
-Shutterstock
-Explore
-🛠️ Technical Stack
-Language: Python
+***
 
-Data Science: Pandas, NumPy
-
-Visualization: Matplotlib (FiveThirtyEight style)
-
-Deep Learning: Keras, TensorFlow
-
-Optimization: Adam Optimizer, MSE Loss functions
-
-🚀 The Data Science Workflow
-1. Data Integrity & EDA
-Analyzed 1,825 unique records (2015–2020).
-
-Performed strict data cleaning: Zero null values, verified date uniqueness, and type-casting.
-
-Visualization: Plotted Open, High, Low, and Close prices to identify historical volatility.
-
-2. Time-Series Preprocessing
-Stationarity Evaluation: Assessed whether the mean and variance change over time—a critical step for any financial forecasting model.
-
-Feature Scaling: Prepared data for Neural Network consumption to ensure faster convergence.
-
-3. Model Architecture
-Algorithm: Specialized in RNN/LSTM layers to capture long-term dependencies in the stock market.
-
-Optimization: Leveraged the Adam optimizer for efficient weight updates during backpropagation.
-
-📊 Key Results & Insights
-Short-Term Accuracy: The model demonstrates high precision within a 2-step prediction horizon, making it effective for immediate trend analysis.
-
-Non-Linearity Discovery: Through rigorous testing, I identified that standard RNNs can fall into "linear behavior" (constant slope). This insight led to the recommendation of adding Dropout layers and Regularization to capture complex market swings.
-
-Extensibility: The pipeline is modular; the logic applied to "Close" prices can be instantly extrapolated to High, Low, or Volume indicators.
-
-💡 Engineering "Maturity" (The Why)
-What sets this project apart is the Critical Analysis section:
-
-Honest Evaluation: I explicitly identified the "additive effect" of errors in time-series, advising against long-term forecasting without further regularization.
-
-Future Work: I am currently researching the integration of Lasso/Ridge Regression with RNNs to create a hybrid model that reduces overfitting—demonstrating a commitment to continuous learning and advanced ML techniques.
-
-📂 How to Run
-Clone this repository.
-
-Ensure you have requirements.txt installed: pip install -r requirements.txt.
-
-Open time-series-forecasting.ipynb in Jupyter Lab or Google Colab.
-
-Contact & Connect
-LinkedIn: [[Your Link Here](https://www.linkedin.com/in/vandana-sharma-20a5ab24a/)]
+### 💡 Why this works for HR:
+1.  **The "Engineering Reflection" Section:** This is the most important part. It shows you aren't just "copying a tutorial." It shows you understand **why** a model fails or succeeds.
+2.  **Visual Structure:** Using badges and emojis makes the project look modern and well-maintained.
+3.  **Skill Keywords:** It prominently features "Keras," "RNN," "Stationarity," and "Data In
